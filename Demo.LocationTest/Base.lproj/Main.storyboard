@@ -160,20 +160,71 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="Ozg-sx-QQJ"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I5a-ap-c6n">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Welcome To the Modern World.
+Hooray!
+Look in thy glass and tell the face thou viewest
+Now is the time that face should form another;
+Whose fresh repair if now thou not renewest,
+Thou dost beguile the world, unbless some mother.
+For where is she so fair whose unear'd womb
+Disdains the tillage of thy husbandry?
+Or who is he so fond will be the tomb,
+Of his self-love to stop posterity? 
+Thou art thy mother's glass and she in thee
+Calls back the lovely April of her prime;
+So thou through windows of thine age shalt see,
+Despite of wrinkles this thy golden time.
+But if thou live, remember'd not to be,
+Die single and thine image dies with thee. </mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="132" width="374" height="596"/>
+                                </variation>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6j-dm-1Ld">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="BeaconScan"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="32" y="77" width="115" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awp-ys-VoX">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="UUIDScan"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="221" y="77" width="148" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="Q7g-21-cgg"/>
+                                <exclude reference="I5a-ap-c6n"/>
+                                <exclude reference="l6j-dm-1Ld"/>
+                                <exclude reference="Awp-ys-VoX"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="Q7g-21-cgg"/>
+                                <include reference="I5a-ap-c6n"/>
+                                <include reference="l6j-dm-1Ld"/>
+                                <include reference="Awp-ys-VoX"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="UUIDScan" destination="Awp-ys-VoX" id="eHl-eT-Zfr"/>
+                        <outlet property="backButton" destination="Q7g-21-cgg" id="c4E-aQ-x28"/>
+                        <outlet property="beaconScan" destination="l6j-dm-1Ld" id="znx-hP-Ckz"/>
+                        <outlet property="textView" destination="I5a-ap-c6n" id="j1Y-Ok-TUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwX-5B-nsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -239,6 +290,6 @@
         <image name="logo.png" width="452" height="140"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FVC-Xa-YdG"/>
+        <segue reference="Ozg-sx-QQJ"/>
     </inferredMetricsTieBreakers>
 </document>

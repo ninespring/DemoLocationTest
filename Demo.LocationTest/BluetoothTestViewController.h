@@ -11,6 +11,10 @@
 @import CoreBluetooth;
 
 @interface BluetoothTestViewController : UIViewController<CBCentralManagerDelegate>
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+@property (strong, nonatomic) IBOutlet UIButton *beaconScan;
+@property (strong, nonatomic) IBOutlet UIButton *UUIDScan;
+@property (strong, nonatomic) IBOutlet UIButton *backButton;
 
 @property (strong, nonatomic) CBCentralManager *cbManager;
 @property (strong, nonatomic) CLLocationManager *clocationManager;

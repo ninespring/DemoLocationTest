@@ -14,12 +14,35 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    
+
+    [self.beaconScan addTarget:self action:@selector(beaconScanButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.UUIDScan addTarget:self action:@selector(UUIDScanButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [self.backButton addTarget:self action:@selector(backFromBluetoothTest:) forControlEvents:UIControlEventTouchUpInside];
+}
+
+
+- (IBAction)beaconScanButtonPressed:(id)sender{
+    if (self.cbManager != nil) {
+        NSLog(@"Stop Periphal Manager");
+        [self stopPeriphalManager];
+    }
     NSArray *uuid_list = [NSArray arrayWithObjects:@"EA01CD23-A1B2-C3D4-E5F6-C08B30FB15B0",@"F2C845E6-9AED-24F9-6C6E-887725D19116",@"E91143DE-ED63-903D-BCDB-1E672599A8E5",@"92A01577-A054-9ECC-57F5-7CABE6736241", nil];
-    
-    
     [self initBeaconScan:uuid_list];
 }
+
+- (IBAction)UUIDScanButtonPressed:(id)sender{
+    if (self.clocationManager != nil) {
+        NSLog(@"Stop Beacon Scan");
+        [self stopBeaconScan];
+    }
+    [self initPeriphalScan];
+}
+
+
+- (IBAction)backFromBluetoothTest:(id)sender{
+    [self stopBluetoothTest];
+}
+
 
 - (void) initPeriphalScan{
     self.cbManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
@@ -65,9 +88,15 @@
     for (NSString *key in advertisementData.allKeys) {
         temp = [temp stringByAppendingString:[NSString stringWithFormat:@"Key: %@, Value:%@\n", key, [advertisementData objectForKey:key]]];
     }
-    NSLog(temp);
+//    NSLog(temp);
+    self.textView.text = temp;
+    NSLog(@"Got Update Periphal Messgae");
 }
 
+- (void) stopPeriphalManager{
+    [self.cbManager stopScan];
+    self.cbManager = nil;
+}
 
 
 
@@ -141,20 +170,31 @@
 - (void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region{
     
     NSLog(@"Found Beacon!");
+    NSString *temp = @"Found Beacon!\n";
     for (CLBeacon *foundBeacon in beacons) {
-    
-    
-
-        NSLog(@"UUID:%@\n",foundBeacon.proximityUUID.UUIDString);
-        NSLog(@"RSSI:%ld\n",(long)foundBeacon.rssi);
-        NSLog(@"Major:%@",foundBeacon.major);
-        NSLog(@"Minor:%@",foundBeacon.minor);
+//    
+//        
+//
+//        NSLog(@"UUID:%@\n",foundBeacon.proximityUUID.UUIDString);
+//        NSLog(@"RSSI:%ld\n",(long)foundBeacon.rssi);
+//        NSLog(@"Major:%@",foundBeacon.major);
+//        NSLog(@"Minor:%@",foundBeacon.minor);
+        
+        temp = [temp stringByAppendingString:[NSString stringWithFormat:@"UUID:%@\n",foundBeacon.proximityUUID.UUIDString]];
+        temp = [temp stringByAppendingString:[NSString stringWithFormat:@"RSSI:%ld\t",(long)foundBeacon.rssi]];
+        temp = [temp stringByAppendingString:[NSString stringWithFormat:@"Major:%@\t",foundBeacon.major]];
+        temp = [temp stringByAppendingString:[NSString stringWithFormat:@"Minor:%@\n",foundBeacon.minor]];
     }
-    
+    self.textView.text = temp;
 }
 
 
-
+- (void) stopBeaconScan{
+    [self.clocationManager stopMonitoringForRegion:self.beaconScan];
+    [self.clocationManager stopRangingBeaconsInRegion:self.beaconScan];
+    [self.clocationManager stopUpdatingLocation];
+    self.clocationManager = nil;
+}
 
 /*
 - (void) initBeaconScan:(NSArray *)uuid_list{
@@ -235,6 +275,11 @@
 
 */
 
+
+- (void) stopBluetoothTest{
+    [self stopBeaconScan];
+    [self stopPeriphalManager];
+}
 
 
 - (void)didReceiveMemoryWarning {

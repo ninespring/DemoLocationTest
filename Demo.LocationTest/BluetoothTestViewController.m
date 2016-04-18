@@ -15,7 +15,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     
-    NSArray *uuid_list = [NSArray arrayWithObjects:@"B0ADD6CF-3A22-F91C-AD93-A42B172E7EB8",@"F2C845E6-9AED-24F9-6C6E-887725D19116",@"E91143DE-ED63-903D-BCDB-1E672599A8E5",@"92A01577-A054-9ECC-57F5-7CABE6736241", nil];
+    NSArray *uuid_list = [NSArray arrayWithObjects:@"EA01CD23-A1B2-C3D4-E5F6-C08B30FB15B0",@"F2C845E6-9AED-24F9-6C6E-887725D19116",@"E91143DE-ED63-903D-BCDB-1E672599A8E5",@"92A01577-A054-9ECC-57F5-7CABE6736241", nil];
     
     
     [self initBeaconScan:uuid_list];
@@ -71,6 +71,92 @@
 
 
 
+
+
+
+
+- (void) initBeaconScan:(NSArray *)uuid_list{
+    self.clocationManager = [[CLLocationManager alloc] init];
+    self.clocationManager.delegate = self;
+    
+    [self beaconScanAuthorizationDetection];
+    
+    NSString *uuid_string = uuid_list[0];
+    NSLog(@"Start With UUID: %@", uuid_string);
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:uuid_string];
+    self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid identifier:uuid.UUIDString];
+    [self.clocationManager startMonitoringForRegion:self.beaconRegion];
+}
+
+- (void) beaconScanAuthorizationDetection{
+    CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
+    NSLog(@"Location Service Status: %d", status);
+    
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        NSLog(@"Location Service Not Decided");
+        [self.clocationManager requestWhenInUseAuthorization];
+        NSLog(@"Location Service In Use");
+    }else if(status == kCLAuthorizationStatusDenied){
+        NSLog(@"Location Service Denied");
+    }else if([CLLocationManager locationServicesEnabled] == NO){
+        NSLog(@"Location Service Disabled");
+    }else if(status == kCLAuthorizationStatusAuthorizedWhenInUse){
+        NSLog(@"Location Service Authorized When In USE");
+    }else if(status == kCLAuthorizationStatusAuthorizedAlways){
+        NSLog(@"Location Service Authorized Always");
+    }
+    
+    [self.clocationManager requestAlwaysAuthorization];
+}
+
+/*
+ 我们把locationManager初始化为CLLocationManager的新实例，然后把我们设置为它的委托，这样当更新时就会通知我们。
+ 
+ 我们通过同样的UUID设置了NSUUID对象，作为一个被app（先前创建的那个）广播的对象。
+ 
+ 最后我们把region传递给location manager 以便于监视。
+ */
+//
+
+- (void) locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
+
+    [self.clocationManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+
+
+- (void) locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region{
+
+    [self.clocationManager stopRangingBeaconsInRegion:self.beaconRegion];
+
+    
+}
+
+
+- (void) locationManager:(CLLocationManager *)manager didStartMonitoringForRegion:(CLRegion *)region{
+    [self.clocationManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+
+
+
+- (void) locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region{
+    
+    NSLog(@"Found Beacon!");
+    for (CLBeacon *foundBeacon in beacons) {
+    
+    
+
+        NSLog(@"UUID:%@\n",foundBeacon.proximityUUID.UUIDString);
+        NSLog(@"RSSI:%ld\n",(long)foundBeacon.rssi);
+        NSLog(@"Major:%@",foundBeacon.major);
+        NSLog(@"Minor:%@",foundBeacon.minor);
+    }
+    
+}
+
+
+
+
+/*
 - (void) initBeaconScan:(NSArray *)uuid_list{
     self.clocationManager = [[CLLocationManager alloc] init];
     self.clocationManager.delegate = self;
@@ -107,13 +193,6 @@
 }
 
 
-/*
- 我们把locationManager初始化为CLLocationManager的新实例，然后把我们设置为它的委托，这样当更新时就会通知我们。
- 
- 我们通过同样的UUID设置了NSUUID对象，作为一个被app（先前创建的那个）广播的对象。
- 
- 最后我们把region传递给location manager 以便于监视。
- */
 //
 
 - (void) locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region{
@@ -143,7 +222,8 @@
     
     NSLog(@"Found Beacon!");
     
-//    NSLog(@"Found %lu Beacons", (unsigned long)beacons.count);
+    NSLog(@"Found %lu Beacons", (unsigned long)beacons.count);
+    
     CLBeacon *foundBeacon = [beacons firstObject];
 //    NSLog(region.proximityUUID);
     NSLog(foundBeacon.proximityUUID.UUIDString);
@@ -153,7 +233,7 @@
 
 }
 
-
+*/
 
 
 

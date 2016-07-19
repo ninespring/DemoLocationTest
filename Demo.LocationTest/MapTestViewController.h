@@ -31,10 +31,12 @@
 @property (strong, nonatomic) UILabel *svgElementTextLabel;
 
 
+@property (strong, nonatomic) IBOutlet UIButton *buttonCurrentPosition;
+@property (strong, nonatomic) IBOutlet UIButton *buttonBounceOff;
 
 //For Debug
 #define LoadedMap @"testMap.svg"
-
+#define BackgroundImage @"backgroundImage_edited.jpg"
 
 //Position Dot Parameters
 #define Radius 10.0;
@@ -51,8 +53,8 @@ alpha:1.0]
 
 
 //Define Color Format
-#define ElementFilledColor UIColorFromRGB(0xCDDC39).CGColor
-#define ElementAfterFillColor UIColorFromRGB(0x34495e).CGColor
+#define ElementFilledColor UIColorFromRGB(0xC7EFCF).CGColor
+#define ElementAfterFillColor UIColorFromRGB(0xF0B67F).CGColor
 #define PositionDotCenterColor UIColorFromRGB(0x2196F3).CGColor
 #define PositionDotBorderColor UIColorFromRGB(0xecf0f1).CGColor
 

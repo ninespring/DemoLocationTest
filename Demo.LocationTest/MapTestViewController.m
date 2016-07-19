@@ -15,17 +15,44 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.svgImage = [SVGKImage imageNamed:LoadedMap];
     
-//    self.scrollViewForSVG = [[UIScrollView alloc] init];
     
-//    self.scrollViewForSVG = [[UIScrollView alloc] initWithFrame:self.scrollViewForSVG.bounds];
-//    self.scrollViewForSVG.bounds = CGRectMake(0, 200, 640, 640);
-    [self.view addSubview:self.scrollViewForSVG];
+    [self initButtonFunction];
     
     [self displayWithZoomAndHit:self.svgImage];
 }
 
+
+- (void) setBackGroundImage{
+    UIImage *backgroundImage = [UIImage imageNamed:BackgroundImage];
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    backgroundImageView.alpha = 0.2;
+    backgroundImageView.center = self.svgLayeredImageView.center;
+    [self.svgLayeredImageView.layer insertSublayer:backgroundImageView.layer atIndex:0];
+}
+
+- (void) initButtonFunction{
+    [self.buttonCurrentPosition addTarget:self action:@selector(buttonCurrentPositionPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.buttonBounceOff addTarget:self action:@selector(buttonBounceOffPressed:) forControlEvents:UIControlEventTouchUpInside];
+}
+
 CGPoint positionPoint;
 CALayer *dotLayer;
+
+
+
+- (IBAction)buttonCurrentPositionPressed:(id)sender{
+    if (self.dotView !=nil) {
+        [self.scrollViewForSVG setContentOffset:CGPointMake(self.dotView.layer.position.x - self.scrollViewForSVG.center.x, self.dotView.layer.position.y - self.scrollViewForSVG.center.y)];
+    }
+}
+
+- (IBAction)buttonBounceOffPressed:(id)sender{
+    if (self.scrollViewForSVG != nil) {
+        self.scrollViewForSVG.bounces = NO;
+        self.scrollViewForSVG.bouncesZoom = NO;
+    }
+}
 
 
 /*
@@ -48,14 +75,20 @@ CALayer *dotLayer;
         
         self.scrollViewForSVG.delegate = self;
         [self.scrollViewForSVG addSubview:self.svgLayeredImageView];
-        [self.scrollViewForSVG setContentSize:self.svgLayeredImageView.frame.size];
+
+        [self.scrollViewForSVG setContentSize:CGSizeMake(self.svgLayeredImageView.frame.size.width,self.svgLayeredImageView.frame.size.height)];
+
+        [self.scrollViewForSVG setContentInset:UIEdgeInsetsMake(self.scrollViewForSVG.frame.size.height, 0.95* self.svgLayeredImageView.frame.size.width, self.scrollViewForSVG.frame.size.height, 0.95* self.svgLayeredImageView.frame.size.width)];
+
         NSLog(@"SVGLayerFrame: %f,%f",self.svgLayeredImageView.frame.size.width,self.svgLayeredImageView.frame.size.height);
+        NSLog(@"ScrollView Center: %f, %f",self.scrollViewForSVG.center.x, self.scrollViewForSVG.center.y);
         float scaleRatio = self.scrollViewForSVG.frame.size.width / self.svgLayeredImageView.frame.size.width;
         
         self.scrollViewForSVG.bouncesZoom = YES;
-        self.scrollViewForSVG.maximumZoomScale = MAX(10, scaleRatio);
+        self.scrollViewForSVG.maximumZoomScale = MAX(5, scaleRatio);
         self.scrollViewForSVG.minimumZoomScale = MIN(1, scaleRatio);
-        //        [self.scrollViewForSVG setZoomScale:0.7];
+        [self.scrollViewForSVG setZoomScale:scaleRatio*2];
+        
         NSLog(@"Current Zoom Scale: %f", scaleRatio);
         
         /** Add gesture recognizer onto the view */
@@ -72,6 +105,7 @@ CALayer *dotLayer;
         [self setupDotLayer];
         [self moveDotLayer:self.scrollViewForSVG.zoomScale];
         
+        [self setBackGroundImage];
     }
 }
 
@@ -110,6 +144,8 @@ CALayer *dotLayer;
 }
 
 - (void)scrollViewDidZoom:(UIScrollView *) scrollView{
+//    [self.scrollViewForSVG setContentSize:CGSizeMake(self.scrollViewForSVG.bounds.size.width + 2 * self.svgLayeredImageView.frame.size.width, self.scrollViewForSVG.bounds.size.height+ 2 * self.svgLayeredImageView.frame.size.height)];
+    [self.scrollViewForSVG setContentInset:UIEdgeInsetsMake(self.scrollViewForSVG.bounds.size.height*0.5, 0.95* self.svgLayeredImageView.bounds.size.width, self.scrollViewForSVG.bounds.size.height*0.5, 0.95* self.svgLayeredImageView.frame.size.width)];
     
     [self moveDotLayer:scrollView.zoomScale];
 }

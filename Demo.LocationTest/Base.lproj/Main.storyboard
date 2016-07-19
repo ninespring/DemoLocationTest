@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="5XU-uz-alR">
@@ -23,14 +23,24 @@
                                     <rect key="frame" x="0.0" y="77" width="414" height="128"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="101" width="374" height="128"/>
+                                    <rect key="frame" x="0.0" y="98" width="374" height="128"/>
                                 </variation>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBF-Fc-8IR">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="测试定位"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="380" width="374" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="ei6-uT-HnJ" kind="presentation" id="HVx-xi-nCD"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3Q-iT-yzq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="测试蓝牙"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="415" width="374" height="30"/>
+                                    <rect key="frame" x="0.0" y="447" width="374" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="CCo-cy-tRN" kind="presentation" id="TZ0-Zm-XPG"/>
@@ -43,30 +53,20 @@
                                     <rect key="frame" x="0.0" y="306" width="414" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="301" width="374" height="30"/>
+                                    <rect key="frame" x="0.0" y="319" width="374" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="7ni-Ve-ZsV" kind="presentation" modalPresentationStyle="fullScreen" id="4YN-Xe-eJd"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBF-Fc-8IR">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="测试定位"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="358" width="374" height="30"/>
-                                </variation>
-                                <connections>
-                                    <segue destination="ei6-uT-HnJ" kind="presentation" id="HVx-xi-nCD"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="5XU-uz-alR"/>
+                                <exclude reference="LBF-Fc-8IR"/>
                                 <exclude reference="V3Q-iT-yzq"/>
                                 <exclude reference="1Qn-0P-J3r"/>
-                                <exclude reference="LBF-Fc-8IR"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -77,12 +77,13 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="V3Q-iT-yzq"/>
                                 <include reference="LBF-Fc-8IR"/>
+                                <include reference="V3Q-iT-yzq"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -97,47 +98,49 @@
                         <viewControllerLayoutGuide type="bottom" id="Mfy-yL-xt5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jLZ-ad-Ja9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="12N-nB-mGc">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="167" width="400" height="466"/>
-                                </variation>
-                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EC5-Yv-CZH">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="Back"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="28" width="46" height="30"/>
+                                    <rect key="frame" x="20" y="20" width="64" height="38"/>
                                 </variation>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="FVC-Xa-YdG"/>
                                 </connections>
                             </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="12N-nB-mGc">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="58" width="375" height="566"/>
+                                </variation>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="12N-nB-mGc"/>
                                 <exclude reference="EC5-Yv-CZH"/>
+                                <exclude reference="12N-nB-mGc"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="12N-nB-mGc"/>
                                 <include reference="EC5-Yv-CZH"/>
+                                <include reference="12N-nB-mGc"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="scrollViewForPositionDisplay" destination="12N-nB-mGc" id="PU1-hL-0rr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HV-7C-XIv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="519.75"/>
+            <point key="canvasLocation" x="1515.75" y="522.375"/>
         </scene>
         <!--Bluetooth Test View Controller-->
         <scene sceneID="1Zo-Lh-s7B">
@@ -148,6 +151,7 @@
                         <viewControllerLayoutGuide type="bottom" id="AAE-wV-07V"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8b6-Lv-v8o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q7g-21-cgg">
@@ -163,7 +167,7 @@
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="I5a-ap-c6n">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <mutableString key="text">Welcome To the Modern World.
+                                <string key="text">Welcome To the Modern World.
 Hooray!
 Look in thy glass and tell the face thou viewest
 Now is the time that face should form another;
@@ -178,25 +182,25 @@ Calls back the lovely April of her prime;
 So thou through windows of thine age shalt see,
 Despite of wrinkles this thy golden time.
 But if thou live, remember'd not to be,
-Die single and thine image dies with thee. </mutableString>
+Die single and thine image dies with thee. </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="132" width="374" height="596"/>
+                                    <rect key="frame" x="20" y="132" width="335" height="527"/>
                                 </variation>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6j-dm-1Ld">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="BeaconScan"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="77" width="115" height="30"/>
+                                    <rect key="frame" x="20" y="77" width="115" height="30"/>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awp-ys-VoX">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" title="UUIDScan"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="221" y="77" width="148" height="30"/>
+                                    <rect key="frame" x="207" y="77" width="148" height="30"/>
                                 </variation>
                             </button>
                         </subviews>
@@ -218,7 +222,8 @@ Die single and thine image dies with thee. </mutableString>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
                         <outlet property="UUIDScan" destination="Awp-ys-VoX" id="eHl-eT-Zfr"/>
                         <outlet property="backButton" destination="Q7g-21-cgg" id="c4E-aQ-x28"/>
@@ -228,7 +233,7 @@ Die single and thine image dies with thee. </mutableString>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PwX-5B-nsh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="1410"/>
+            <point key="canvasLocation" x="1478.25" y="1409.625"/>
         </scene>
         <!--MapTest View-->
         <scene sceneID="uWi-Yy-GXd">
@@ -239,6 +244,7 @@ Die single and thine image dies with thee. </mutableString>
                         <viewControllerLayoutGuide type="bottom" id="PQi-yS-pz5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="JBc-Du-cqi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OwR-qh-z4w">
@@ -248,7 +254,7 @@ Die single and thine image dies with thee. </mutableString>
                                     <rect key="frame" x="20" y="28" width="71" height="30"/>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="44" y="56" width="46" height="30"/>
+                                    <rect key="frame" x="20" y="28" width="46" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="lvB-XD-fnE"/>
@@ -259,13 +265,32 @@ Die single and thine image dies with thee. </mutableString>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="150" width="414" height="435"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="55" width="375" height="558"/>
+                                </variation>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO7-WS-Ud7">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Current Position"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="621" width="123" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kbg-zE-0Ju">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Bounce Off"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="270" y="621" width="94" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="OwR-qh-z4w"/>
                                 <exclude reference="lHR-TT-B1L"/>
+                                <exclude reference="AO7-WS-Ud7"/>
+                                <exclude reference="Kbg-zE-0Ju"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -274,22 +299,31 @@ Die single and thine image dies with thee. </mutableString>
                                 <include reference="lHR-TT-B1L"/>
                             </mask>
                         </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="AO7-WS-Ud7"/>
+                                <include reference="Kbg-zE-0Ju"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="256-uH-2dL"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="buttonBounceOff" destination="Kbg-zE-0Ju" id="K6D-Kr-pq6"/>
+                        <outlet property="buttonCurrentPosition" destination="AO7-WS-Ud7" id="6Kk-jG-Ldv"/>
                         <outlet property="scrollViewForSVG" destination="lHR-TT-B1L" id="D0e-l9-HP7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iV1-kL-e8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1479" y="-286"/>
+            <point key="canvasLocation" x="1478.25" y="-286.125"/>
         </scene>
     </scenes>
     <resources>
         <image name="logo.png" width="452" height="140"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ozg-sx-QQJ"/>
+        <segue reference="FVC-Xa-YdG"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841B67371D3E35ED00BECADF /* 101001200002.optparam in Resources */ = {isa = PBXBuildFile; fileRef = 841B67341D3E35ED00BECADF /* 101001200002.optparam */; };
+		841B67381D3E35ED00BECADF /* 101001200002.wifilist in Resources */ = {isa = PBXBuildFile; fileRef = 841B67351D3E35ED00BECADF /* 101001200002.wifilist */; };
+		841B67391D3E35ED00BECADF /* 101001200002.wp in Resources */ = {isa = PBXBuildFile; fileRef = 841B67361D3E35ED00BECADF /* 101001200002.wp */; };
+		841B673F1D3E374D00BECADF /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841B673E1D3E374D00BECADF /* LocationController.m */; };
+		841B674C1D3E3EFE00BECADF /* libNexdTechLocationEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 841B674B1D3E3EFE00BECADF /* libNexdTechLocationEngine.a */; };
 		8478D49A1CC0C103005AB2C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4991CC0C103005AB2C7 /* main.m */; };
 		8478D49D1CC0C103005AB2C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D49C1CC0C103005AB2C7 /* AppDelegate.m */; };
 		8478D4A01CC0C103005AB2C7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D49F1CC0C103005AB2C7 /* ViewController.m */; };
 		8478D4A31CC0C103005AB2C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4A11CC0C103005AB2C7 /* Main.storyboard */; };
 		8478D4A51CC0C103005AB2C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4A41CC0C103005AB2C7 /* Assets.xcassets */; };
-		8478D4A81CC0C103005AB2C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4A61CC0C103005AB2C7 /* LaunchScreen.storyboard */; };
 		8478D4B31CC0C103005AB2C7 /* Demo_LocationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4B21CC0C103005AB2C7 /* Demo_LocationTestTests.m */; };
 		8478D4BE1CC0C103005AB2C7 /* Demo_LocationTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4BD1CC0C103005AB2C7 /* Demo_LocationTestUITests.m */; };
 		8478D4CD1CC0C143005AB2C7 /* SVGKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478D4CB1CC0C143005AB2C7 /* SVGKit.framework */; };
@@ -25,11 +29,15 @@
 		8478D4DA1CC0C177005AB2C7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478D4D91CC0C177005AB2C7 /* QuartzCore.framework */; };
 		8478D4DC1CC0C17C005AB2C7 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478D4DB1CC0C17C005AB2C7 /* libxml2.tbd */; };
 		8478D4DE1CC0C19D005AB2C7 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8478D4DD1CC0C19D005AB2C7 /* CoreImage.framework */; };
-		8478D4E01CC0C246005AB2C7 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4DF1CC0C246005AB2C7 /* logo.png */; };
 		8478D4E51CC0C7E7005AB2C7 /* MapTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4E41CC0C7E7005AB2C7 /* MapTestViewController.m */; };
 		8478D4E81CC0C9B3005AB2C7 /* PositionTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4E71CC0C9B3005AB2C7 /* PositionTestViewController.m */; };
 		8478D4EB1CC0CA66005AB2C7 /* BluetoothTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8478D4EA1CC0CA66005AB2C7 /* BluetoothTestViewController.m */; };
 		8478D4ED1CC0CC5E005AB2C7 /* testMap.svg in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4EC1CC0CC5E005AB2C7 /* testMap.svg */; };
+		8478D4EF1CD1CA74005AB2C7 /* logo_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8478D4EE1CD1CA74005AB2C7 /* logo_icon.png */; };
+		84A1901A1CD1EB8200E3F8D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84A190191CD1EB8200E3F8D8 /* LaunchScreen.storyboard */; };
+		84A1901C1CD1EEEC00E3F8D8 /* logo_title.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1901B1CD1EEEC00E3F8D8 /* logo_title.png */; };
+		84A1901E1CD1FD3200E3F8D8 /* backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 84A1901D1CD1FD3200E3F8D8 /* backgroundImage.png */; };
+		84A190201CD202ED00E3F8D8 /* backgroundImage_edited.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 84A1901F1CD202ED00E3F8D8 /* backgroundImage_edited.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +62,7 @@
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
-			dstSubfolderSpec = 10;
+			dstSubfolderSpec = 7;
 			files = (
 				8478D4D01CC0C143005AB2C7 /* CocoaLumberjack.framework in Embed Frameworks */,
 				8478D4CE1CC0C143005AB2C7 /* SVGKit.framework in Embed Frameworks */,
@@ -65,6 +73,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		841B67341D3E35ED00BECADF /* 101001200002.optparam */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 101001200002.optparam; path = ../../../LocationEngineLibrary/CompiledLocationEngineTest/CompiledLocationEngineTest/101001200002.optparam; sourceTree = "<group>"; };
+		841B67351D3E35ED00BECADF /* 101001200002.wifilist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 101001200002.wifilist; path = ../../../LocationEngineLibrary/CompiledLocationEngineTest/CompiledLocationEngineTest/101001200002.wifilist; sourceTree = "<group>"; };
+		841B67361D3E35ED00BECADF /* 101001200002.wp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = 101001200002.wp; path = ../../../LocationEngineLibrary/CompiledLocationEngineTest/CompiledLocationEngineTest/101001200002.wp; sourceTree = "<group>"; };
+		841B673C1D3E363800BECADF /* locate_code_base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = locate_code_base.h; path = ../../../LocationEngineLibrary/CompiledLocationEngineTest/CompiledLocationEngineTest/locate_code_base.h; sourceTree = "<group>"; };
+		841B673E1D3E374D00BECADF /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationController.m; sourceTree = "<group>"; };
+		841B67401D3E375F00BECADF /* LocationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationController.h; sourceTree = "<group>"; };
+		841B674B1D3E3EFE00BECADF /* libNexdTechLocationEngine.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNexdTechLocationEngine.a; path = ../../LocationEngineLibrary/CompiledLocationEngineTest/libNexdTechLocationEngine.a; sourceTree = "<group>"; };
 		8478D4951CC0C103005AB2C7 /* Demo.LocationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.LocationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478D4991CC0C103005AB2C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8478D49B1CC0C103005AB2C7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -73,7 +88,6 @@
 		8478D49F1CC0C103005AB2C7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8478D4A21CC0C103005AB2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8478D4A41CC0C103005AB2C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8478D4A71CC0C103005AB2C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8478D4A91CC0C103005AB2C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8478D4AE1CC0C103005AB2C7 /* Demo.LocationTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Demo.LocationTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8478D4B21CC0C103005AB2C7 /* Demo_LocationTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_LocationTestTests.m; sourceTree = "<group>"; };
@@ -89,7 +103,6 @@
 		8478D4D91CC0C177005AB2C7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8478D4DB1CC0C17C005AB2C7 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		8478D4DD1CC0C19D005AB2C7 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
-		8478D4DF1CC0C246005AB2C7 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		8478D4E31CC0C7E7005AB2C7 /* MapTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapTestViewController.h; sourceTree = "<group>"; };
 		8478D4E41CC0C7E7005AB2C7 /* MapTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapTestViewController.m; sourceTree = "<group>"; };
 		8478D4E61CC0C9B3005AB2C7 /* PositionTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PositionTestViewController.h; sourceTree = "<group>"; };
@@ -97,6 +110,11 @@
 		8478D4E91CC0CA66005AB2C7 /* BluetoothTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothTestViewController.h; sourceTree = "<group>"; };
 		8478D4EA1CC0CA66005AB2C7 /* BluetoothTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothTestViewController.m; sourceTree = "<group>"; };
 		8478D4EC1CC0CC5E005AB2C7 /* testMap.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = testMap.svg; path = ../../../IOS_Demo_OpenSource_IndoorMap/testMap.svg; sourceTree = "<group>"; };
+		8478D4EE1CD1CA74005AB2C7 /* logo_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_icon.png; path = ../../../../../../../Desktop/logo_icon.png; sourceTree = "<group>"; };
+		84A190191CD1EB8200E3F8D8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84A1901B1CD1EEEC00E3F8D8 /* logo_title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_title.png; path = ../../../../../../../Desktop/logo_title.png; sourceTree = "<group>"; };
+		84A1901D1CD1FD3200E3F8D8 /* backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundImage.png; path = ../../../../../../../Desktop/backgroundImage.png; sourceTree = "<group>"; };
+		84A1901F1CD202ED00E3F8D8 /* backgroundImage_edited.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = backgroundImage_edited.jpg; path = ../../../../../../../Desktop/backgroundImage_edited.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +130,7 @@
 				8478D4D41CC0C162005AB2C7 /* CoreGraphics.framework in Frameworks */,
 				8478D4CF1CC0C143005AB2C7 /* CocoaLumberjack.framework in Frameworks */,
 				8478D4CD1CC0C143005AB2C7 /* SVGKit.framework in Frameworks */,
+				841B674C1D3E3EFE00BECADF /* libNexdTechLocationEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +151,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		841B673D1D3E372900BECADF /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				841B673E1D3E374D00BECADF /* LocationController.m */,
+				841B67401D3E375F00BECADF /* LocationController.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
 		8478D48C1CC0C103005AB2C7 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +184,7 @@
 		8478D4971CC0C103005AB2C7 /* Demo.LocationTest */ = {
 			isa = PBXGroup;
 			children = (
+				841B673D1D3E372900BECADF /* Core */,
 				8478D4E31CC0C7E7005AB2C7 /* MapTestViewController.h */,
 				8478D4E41CC0C7E7005AB2C7 /* MapTestViewController.m */,
 				8478D4E61CC0C9B3005AB2C7 /* PositionTestViewController.h */,
@@ -167,8 +196,8 @@
 				8478D49E1CC0C103005AB2C7 /* ViewController.h */,
 				8478D49F1CC0C103005AB2C7 /* ViewController.m */,
 				8478D4A11CC0C103005AB2C7 /* Main.storyboard */,
+				84A190191CD1EB8200E3F8D8 /* LaunchScreen.storyboard */,
 				8478D4A41CC0C103005AB2C7 /* Assets.xcassets */,
-				8478D4A61CC0C103005AB2C7 /* LaunchScreen.storyboard */,
 				8478D4A91CC0C103005AB2C7 /* Info.plist */,
 				8478D4981CC0C103005AB2C7 /* Supporting Files */,
 			);
@@ -178,8 +207,15 @@
 		8478D4981CC0C103005AB2C7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				841B673C1D3E363800BECADF /* locate_code_base.h */,
+				841B67341D3E35ED00BECADF /* 101001200002.optparam */,
+				841B67351D3E35ED00BECADF /* 101001200002.wifilist */,
+				841B67361D3E35ED00BECADF /* 101001200002.wp */,
+				84A1901F1CD202ED00E3F8D8 /* backgroundImage_edited.jpg */,
+				84A1901D1CD1FD3200E3F8D8 /* backgroundImage.png */,
+				84A1901B1CD1EEEC00E3F8D8 /* logo_title.png */,
+				8478D4EE1CD1CA74005AB2C7 /* logo_icon.png */,
 				8478D4EC1CC0CC5E005AB2C7 /* testMap.svg */,
-				8478D4DF1CC0C246005AB2C7 /* logo.png */,
 				8478D4991CC0C103005AB2C7 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -206,6 +242,7 @@
 		8478D4D21CC0C14B005AB2C7 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
+				841B674B1D3E3EFE00BECADF /* libNexdTechLocationEngine.a */,
 				8478D4DD1CC0C19D005AB2C7 /* CoreImage.framework */,
 				8478D4DB1CC0C17C005AB2C7 /* libxml2.tbd */,
 				8478D4D91CC0C177005AB2C7 /* QuartzCore.framework */,
@@ -323,11 +360,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841B67371D3E35ED00BECADF /* 101001200002.optparam in Resources */,
+				84A1901A1CD1EB8200E3F8D8 /* LaunchScreen.storyboard in Resources */,
+				84A1901E1CD1FD3200E3F8D8 /* backgroundImage.png in Resources */,
+				841B67391D3E35ED00BECADF /* 101001200002.wp in Resources */,
+				84A1901C1CD1EEEC00E3F8D8 /* logo_title.png in Resources */,
+				84A190201CD202ED00E3F8D8 /* backgroundImage_edited.jpg in Resources */,
 				8478D4ED1CC0CC5E005AB2C7 /* testMap.svg in Resources */,
-				8478D4E01CC0C246005AB2C7 /* logo.png in Resources */,
-				8478D4A81CC0C103005AB2C7 /* LaunchScreen.storyboard in Resources */,
+				841B67381D3E35ED00BECADF /* 101001200002.wifilist in Resources */,
 				8478D4A51CC0C103005AB2C7 /* Assets.xcassets in Resources */,
 				8478D4A31CC0C103005AB2C7 /* Main.storyboard in Resources */,
+				8478D4EF1CD1CA74005AB2C7 /* logo_icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +400,7 @@
 				8478D4A01CC0C103005AB2C7 /* ViewController.m in Sources */,
 				8478D4EB1CC0CA66005AB2C7 /* BluetoothTestViewController.m in Sources */,
 				8478D49D1CC0C103005AB2C7 /* AppDelegate.m in Sources */,
+				841B673F1D3E374D00BECADF /* LocationController.m in Sources */,
 				8478D49A1CC0C103005AB2C7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,14 +443,6 @@
 				8478D4A21CC0C103005AB2C7 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8478D4A61CC0C103005AB2C7 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8478D4A71CC0C103005AB2C7 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -591,6 +627,7 @@
 				8478D4C41CC0C103005AB2C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8478D4C51CC0C103005AB2C7 /* Build configuration list for PBXNativeTarget "Demo.LocationTestTests" */ = {
 			isa = XCConfigurationList;
@@ -599,6 +636,7 @@
 				8478D4C71CC0C103005AB2C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8478D4C81CC0C103005AB2C7 /* Build configuration list for PBXNativeTarget "Demo.LocationTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -607,6 +645,7 @@
 				8478D4CA1CC0C103005AB2C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

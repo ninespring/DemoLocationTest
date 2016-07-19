@@ -10,6 +10,6 @@
 
 @interface PositionTestViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet UIScrollView *scrollViewForPositionDisplay;
+@property (strong, nonatomic) IBOutlet UILabel *testLabel;
 
 @end
